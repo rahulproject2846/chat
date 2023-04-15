@@ -1,0 +1,51 @@
+.card {
+    width: 375px;
+    padding: 15px 20px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+}
+
+.form-group {
+    margin: 15px 0px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-control {
+    padding: 12px;
+    border: none;
+    outline: none;
+    background: transparent;
+    border-bottom: 2px solid #fff;
+
+    &::placeholder {
+        color: #fff;
+        font-weight: 400;
+    }
+}
+
+
+.btn {
+    outline: none;
+    color: #000;
+    text-transform: uppercase;
+    border-radius: 40px;
+    padding: 12px;
+    text-align: center;
+    background-color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+*:-webkit-autofill,
+*:-webkit-autofill:hover,
+*:-webkit-autofill:focus,
+*:-webkit-autofill:active {
+    transition: all 5000s ease-in-out 0s;
+    transition-property: background-color, color;
+    -webkit-box-shadow: transparent inset;
+    -webkit-text-fill-color: #fff;
+    font-weight: 300 !important;
+}

@@ -1,0 +1,45 @@
+.active-friends {
+    .active-friend {
+        overflow: hidden;
+        cursor: pointer;
+        width: 55px;
+        text-align: center;
+
+        .image-active-icon {
+            text-align: center;
+
+            .image {
+                margin: 5px;
+                position: relative;
+
+                img {
+                    width: 45px;
+                    height: 45px;
+                    border-radius: 50%;
+                }
+
+                .active-icon {
+                    position: absolute;
+                    bottom: 5px;
+                    right: 3px;
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 50%;
+                    background-color: rgb(27, 223, 53);
+                }
+            }
+        }
+
+        p {
+            color: var(--text-color);
+            font-size: 12px;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        label{
+            padding: 7px 15px !important;
+        }
+    }
+}

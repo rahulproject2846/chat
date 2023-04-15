@@ -1,0 +1,281 @@
+.col-9 {
+    .right-side{
+        height: 100%;
+        .row{
+            height: 100%;
+            .col-8 {
+                transition: all .6s;
+
+                .message-send-show {
+                    height:100vh;
+                    border-right: 1px solid var(--border-color);
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+
+                    .header {
+                        display: flex;
+                        width: 100%;
+                        flex-direction: row;
+                        align-items: center;
+                        justify-content: space-between;
+                        padding: 12px 10px;
+                        border-bottom: 1px solid var(--border-color);
+
+                        .backBtn {
+                            position: fixed;
+                        }
+
+                        label {
+                            display: flex;
+
+
+                            .backIcon {
+                                width: 30px;
+                                font-size: 24px;
+                                flex-direction: column;
+                                justify-content: center;
+                                display: none;
+                                color: var(--text-color);
+                                height: 30px;
+                            }
+                        }
+
+                        .image-name {
+                            display: flex;
+                            align-items: center;
+
+                            .image {
+                                position: relative;
+                                width: 40px;
+                                height: 40px;
+
+                                img {
+                                    width: 40px;
+                                    height: 40px;
+                                    border-radius: 50%;
+                                }
+
+                                .active-icon {
+                                    position: absolute;
+                                    width: 10px;
+                                    height: 10px;
+                                    border-radius: 50%;
+                                    background-color: rgb(28, 212, 28);
+                                    right: 0px;
+                                    bottom: 0pc;
+                                }
+                            }
+
+                            .name {
+                                display: -webkit-box;
+                                -webkit-line-clamp: 2;
+                                -webkit-box-orient: vertical;
+                                overflow: hidden;
+
+                                h3 {
+                                    padding-left: 10px;
+                                    color: var(--text-color);
+                                }
+
+                                span {
+                                    color: var(--message-time);
+                                    margin-bottom: 3px;
+                                    font-size: 14px;
+                                    padding-left: 12px;
+                                }
+                            }
+                        }
+
+                        .friend-search {
+                            padding: 0px 8px;
+
+                            .search {
+                                display: flex;
+                                width: 100%;
+                                height: 40px;
+                                background-color: var(--search-bg);
+                                border-radius: 50px;
+                                margin: 20px 0px;
+
+                                button {
+                                    padding: 12px;
+                                    border-bottom-left-radius: 50px;
+                                    border-top-left-radius: 50px;
+                                    border: none;
+                                    color: var(--text-color);
+                                    font-size: 20px;
+                                    background-color: transparent;
+                                }
+
+                                .form-control {
+                                    width: 100%;
+                                    padding-left: 0px;
+                                    border-bottom-right-radius: 50px;
+                                    border-top-right-radius: 50pc;
+                                    background-color: #fff0;
+                                    border: none;
+                                    color: var(--text-color);
+
+                                    &::placeholder {
+                                        color: var(--text-color);
+                                    }
+                                }
+                            }
+                        }
+
+                        .icons {
+                            display: flex;
+
+                            .icon {
+                                height: 35px;
+                                width: 35px;
+                                border-radius: 50%;
+                                margin-left: 8px;
+                                color: var(--icon-color);
+                                background-color: var(--icon-bg-color);
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+
+                                label {
+                                    display: flex;
+                                    margin-bottom: 0px;
+
+                                    .hamburger {
+                                        width: 15px;
+                                        height: 15px;
+                                        margin: 0 auto;
+                                        display: flex;
+                                        visibility: visible;
+
+                                        .menu {
+                                            position: relative;
+                                            width: 100%;
+                                            height: 100%;
+                                            display: flex;
+                                            flex-direction: column;
+                                            justify-content: space-around;
+                                            align-items: center;
+
+                                            .bar1 {
+                                                transform: translateY(5px) rotate(45deg);
+                                                width: 100%;
+                                                height: 1px;
+                                                background: var(--text-color);
+                                                transition: all 1s;
+
+                                            }
+
+                                            .bar2 {
+                                                opacity: 0;
+                                                background: var(--text-color);
+                                                width: 100%;
+                                                height: 1px;
+                                                transition: all 1s;
+                                            }
+
+                                            .bar3 {
+                                                transform: translateY(-5px) rotate(-45deg);
+                                                width: 100%;
+                                                height: 1px;
+                                                background: var(--text-color);
+                                                transition: all 1s;
+                                            }
+                                        }
+
+                                    }
+                                }
+                            }
+                        }
+
+                    }
+                }
+            }
+
+            .col-4 {
+                .friend-info {
+                    padding: 12px 15px;
+                    visibility: visible;
+                    transition:
+                        height 3s,
+                        visibility 0s;
+                    height: 100%;
+                    overflow: hidden;
+                }
+
+                visibility: visible;
+                transition: width 1s,
+                visibility 0s 1s;
+                overflow: hidden;
+            }
+        }
+
+    }
+
+    #dot {
+        display: none;
+    }
+
+    #dot:checked~.row {
+        .col-8 {
+            width: 100%;
+
+            .message-show {
+                .my-message .my-text {
+                    width: 700px;
+                    word-break: break-all;
+                }
+
+                .fd-message .fd-text {
+                    width: 700px;
+                    word-break: break-all;
+                }
+            }
+
+            .message-send-show .header .icons .icon label .hamburger .menu {
+                .bar1 {
+                    transform: translateY(0px) rotate(0deg);
+                }
+
+                .bar2 {
+                    opacity: 1;
+                }
+
+                .bar3 {
+                    transform: translateY(0px) rotate(0deg);
+                }
+            }
+        }
+
+        .col-4 {
+            .friend-info {
+                visibility: hidden;
+                transition:
+                    height 1s,
+                    visibility 0s;
+                height: 0;
+
+                .others {
+                    .custom-chat .arrowDown {
+                        display: none;
+                    }
+
+                    .privacy .arrowDown {
+                        display: none;
+                    }
+
+                    .media .arrowDown {
+                        display: none;
+                    }
+                }
+            }
+
+            visibility: hidden;
+            transition: width 1s,
+            visibility 0s;
+            width: 0;
+        }
+    }
+
+}

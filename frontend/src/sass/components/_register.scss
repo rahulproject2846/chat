@@ -1,0 +1,86 @@
+.register,
+.login {
+    width: 100%;
+    height: 100vh;
+    background: url('11.jpg')no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .card {
+        .card-header {
+            h3 {
+                text-align: center;
+                color: #fff;
+            }
+        }
+
+        .card-body {
+            .form-group {
+                label {
+                    color: var(--text-white);
+                }
+
+                .form-control {
+                    color: #fff;
+                }
+
+                &:last-child {
+                    margin-bottom: 0px;
+                }
+
+                span {
+                    text-align: center;
+
+                    a {
+                        color: #fff;
+                    }
+                }
+
+                .file-image {
+                    display: flex;
+
+                    .image {
+                        width: 50px;
+                        height: 50px;
+                        border-radius: 50%;
+                        border: 1px solid rgb(199, 195, 195);
+                        overflow: hidden;
+
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                        }
+                    }
+
+                    .file {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+
+                        .form-control {
+                            display: none;
+                        }
+
+                        label {
+                            background: transparent;
+                            border: 1px solid #fff;
+                            padding: 8px;
+                            margin-bottom: 0px;
+                            width: 120px;
+                            text-align: center;
+                            border-radius: 50px;
+                            margin-left: 10px;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

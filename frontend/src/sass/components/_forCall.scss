@@ -1,0 +1,61 @@
+.call-friend {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .recents {
+        margin-left: 10px;
+        padding: 5px;
+        color: var(--message-time);
+        font-size: 14px;
+    }
+
+    label {
+        display: flex;
+        align-items: center;
+        padding: 7px 15px;
+        width: 100%;
+        border-radius: 10px;
+
+        &:hover {
+            background-color: var(--active-color);
+        }
+
+        .image-call-icon {
+            .image {
+                height: 50px;
+                width: 50px;
+                margin-right: 8px;
+
+                img {
+                    height: 50px;
+                    width: 50px;
+                    border-radius: 50%;
+                }
+            }
+        }
+
+        .call-detils-conversation {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .call-detils {
+                h4 {
+                    font-weight: 300;
+                }
+
+                .call-time {
+                    color: var(--message-time);
+                    font-size: 12px;
+                    padding: 2px 5px;
+
+                    .missed {
+                        color: #d15454;
+                    }
+                }
+            }
+        }
+    }
+}
